@@ -6,7 +6,7 @@ export class SignUpController {
   // eslint-disable-next-line @typescript-eslint/promise-function-async
   handle(httpRequest: HttpRequest): HttpResponse | any {
     if (!httpRequest.body.name) {
-      return badRequest(new MissingParamError('nome'))
+      return badRequest(new MissingParamError('name'))
     }
     if (!httpRequest.body.email) {
       return badRequest(new MissingParamError('email'))
